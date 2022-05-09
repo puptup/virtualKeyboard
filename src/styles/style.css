@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(270deg, #8d1c7a 0%, rgba(35, 154, 240, 0.75) 100%) no-repeat;
+  height: calc(100vh - 40px);
+}
+
+.text-area {
+  font-size: 18px;
+  font-family: 'Roboto Slab', serif;
+
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  width: 1000px;
+  min-height: 150px;
+
+  resize: none;
+  outline: none;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.904);
+  color: rgb(58 46 46);
+  ;
+}
+
+.keyboard {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 50px 50px 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1000px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.keyboard__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.keyboard__row:last-child {
+  padding-bottom: 0;
+}
+
+.keyboard__key {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  min-width: 50px;
+  height: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.51);
+
+  transition: transform 0.1s linear,
+    box-shadow 0.1s ease-in, background-color 0.1s ease-in;
+}
+
+.keyboard__special-key {
+  background-color: rgba(255, 255, 255, 0.568);
+}
+
+.keyboard__key:active,
+.keyboard__key-active {
+  background-color: rgba(255, 255, 255, 0.658);
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.51);
+}
+
+.gradient_bg {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
+
+.description {
+  border: 2px solid white;
+  text-align: center;
+  width: 700px;
+  margin: 40px auto;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.76);
+}
+
+.description p {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: rgb(44, 8, 8);
+}
+
+.game {
+  position: relative;
+  user-select: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  height: 130px;
+  background-color: rgba(105, 105, 105, 0.452);
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.game__line {
+  margin-left: 50%;
+  border-radius: 5px;
+  background-color: #4e4e4ef6;
+  display: flex;
+}
+
+.game__letter {
+  color: #bdb7b7;
+}
+
+.game__letter-active {
+  animation-duration: 1s;
+  animation-name: letter-active-anim;
+  animation-iteration-count: infinite;
+}
+
+.game__letter-passed {
+  color: rgb(231, 231, 231);
+}
+
+
+@keyframes letter-active-anim {
+  0% {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+
+  50% {
+    color: rgb(47, 211, 47);
+    text-decoration: none;
+  }
+
+  100% {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.game__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(219, 219, 219, 0.295);
+}
+
+.game__menu-description {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 24px;
+}
+
+.game__timer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.game__timer:after {
+  content: 's';
+}
+
+.game__start-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  min-width: 50px;
+  height: 50px;
+  border: 0;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.51);
+}
+
+.switcher {
+  font-size: 20px;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 16px;
+  border: 0;
+  margin: 0 20px;
+
+}
