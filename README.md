@@ -1,4 +1,6 @@
 # virtualKeyboard
 
-stack: webpack, eslint, css, js
-depoy: https://github.com/puptup/virtualKeyboard
+## stack: webpack, eslint, css, js
+
+
+## depoy: https://puptup.github.io/virtualKeyboard/
